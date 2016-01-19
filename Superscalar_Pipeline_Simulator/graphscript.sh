@@ -1,0 +1,26 @@
+set -x
+./sim 512 008 1 val_trace_gcc1 > graph_runs/iq_gcc_val31.out
+./sim 512 008 2 val_trace_gcc1 > graph_runs/iq_gcc_val32.out
+./sim 512 008 4 val_trace_gcc1 > graph_runs/iq_gcc_val34.out
+./sim 512 008 8 val_trace_gcc1 > graph_runs/iq_gcc_val38.out
+./sim 512 016 1 val_trace_gcc1 > graph_runs/iq_gcc_val41.out
+./sim 512 016 2 val_trace_gcc1 > graph_runs/iq_gcc_val42.out
+./sim 512 016 4 val_trace_gcc1 > graph_runs/iq_gcc_val44.out
+./sim 512 016 8 val_trace_gcc1 > graph_runs/iq_gcc_val48.out
+./sim 512 032 1 val_trace_gcc1 > graph_runs/iq_gcc_val51.out
+./sim 512 032 2 val_trace_gcc1 > graph_runs/iq_gcc_val52.out
+./sim 512 032 4 val_trace_gcc1 > graph_runs/iq_gcc_val54.out
+./sim 512 032 8 val_trace_gcc1 > graph_runs/iq_gcc_val58.out
+./sim 512 064 1 val_trace_gcc1 > graph_runs/iq_gcc_val61.out
+./sim 512 064 2 val_trace_gcc1 > graph_runs/iq_gcc_val62.out
+./sim 512 064 4 val_trace_gcc1 > graph_runs/iq_gcc_val64.out
+./sim 512 064 8 val_trace_gcc1 > graph_runs/iq_gcc_val68.out
+./sim 512 128 1 val_trace_gcc1 > graph_runs/iq_gcc_val71.out
+./sim 512 128 2 val_trace_gcc1 > graph_runs/iq_gcc_val72.out
+./sim 512 128 4 val_trace_gcc1 > graph_runs/iq_gcc_val74.out
+./sim 512 128 8 val_trace_gcc1 > graph_runs/iq_gcc_val78.out
+./sim 512 256 1 val_trace_gcc1 > graph_runs/iq_gcc_val81.out
+./sim 512 256 2 val_trace_gcc1 > graph_runs/iq_gcc_val82.out
+./sim 512 256 4 val_trace_gcc1 > graph_runs/iq_gcc_val84.out
+./sim 512 256 8 val_trace_gcc1 > graph_runs/iq_gcc_val88.out
+awk '/IPC/ {print $7}' graph_runs/iq_gcc_val??.out > graph_runs/iq_gcc1_excelpoints.txt
